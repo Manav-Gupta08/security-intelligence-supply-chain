@@ -36,6 +36,19 @@ Recommended commit prefixes are `docs`, `feat`, `fix`, `test`, `refactor`, `buil
 
 ### 2026-09-21 - Manav Gupta
 
+**Commit message:** `build: initialize Phase 1 project foundation`
+
+**Changes:**
+
+- Added the React and TypeScript frontend and Java 21 Spring Boot modular-monolith backend scaffolds.
+- Added pinned PostgreSQL and Redis infrastructure, CI, environment templates, ignore rules, and local development documentation.
+
+**Verification:**
+
+- Passed frontend lint/build, Compose validation, and backend packaging in a Java 21 JDK container.
+
+### 2026-09-21 - Manav Gupta
+
 **Commit message:** `docs: establish Phase 0 foundation`
 
 **Changes:**

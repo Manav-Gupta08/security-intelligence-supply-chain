@@ -1,0 +1,11 @@
+.env
+.DS_Store
+.idea/
+.vscode/
+*.log
+AI.md
+build/
+
+backend/target/
+frontend/node_modules/
+frontend/dist/
