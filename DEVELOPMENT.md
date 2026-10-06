@@ -91,7 +91,7 @@ npm run build
 npm run dev
 ```
 
-The generated Vite screen is temporary scaffolding, not the product dashboard design.
+The frontend is a layout skeleton only; it does not call the API yet. The dev server proxies `/api` to `http://localhost:8080`.
 
 ## Windows
 

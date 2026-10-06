@@ -36,6 +36,19 @@ Recommended commit prefixes are `docs`, `feat`, `fix`, `test`, `refactor`, `buil
 
 ### 2026-10-06 - Manav Gupta
 
+**Commit message:** `feat(frontend): replace Vite starter with dashboard`
+
+**Changes:**
+
+- Replaced the Vite starter page with an unstyled layout skeleton: header, organization selector placeholder, navigation for the MVP dashboard views, and a placeholder content area.
+- Removed unused starter assets and styles, set the page title, and proxied `/api` to the local backend for development.
+
+**Verification:**
+
+- `npm ci`, `npm run lint`, and `npm run build` passed.
+
+### 2026-10-06 - Manav Gupta
+
 **Commit message:** `feat(backend): add problem errors, organization read API, and GitHub webhook intake`
 
 **Changes:**
