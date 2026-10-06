@@ -45,6 +45,11 @@ See [DEVELOPMENT.md](DEVELOPMENT.md) for validation commands and environment det
 - [Architecture](ARCHITECTURE.md)
 - [Phase 0 tracker](docs/phase-0/README.md)
 - [Contribution rules](CONTRIBUTING.md)
+- [Architecture decision records](docs/decisions/README.md)
+- [Security policy](SECURITY.md)
+- [Code of conduct](CODE_OF_CONDUCT.md)
 - [Development change log](CHANGELOG.md)
 
-No open-source license has been selected yet. See the [license evaluation](docs/phase-0/LICENSE_EVALUATION.md) before using or distributing the project.
+## License
+
+Released under the [MIT License](LICENSE).

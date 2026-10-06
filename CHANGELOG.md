@@ -34,6 +34,20 @@ Recommended commit prefixes are `docs`, `feat`, `fix`, `test`, `refactor`, `buil
 
 ## Entries
 
+### 2026-10-06 - Manav Gupta
+
+**Commit message:** `docs: adopt MIT license and record Phase 1 decisions`
+
+**Changes:**
+
+- Added the MIT license, security policy, code of conduct, issue forms, and pull request template required for an open-source repository.
+- Added decision records for the license, technology baseline, API error format and documentation, and GitHub webhook intake.
+- Updated the README, contribution rules, Phase 0 tracker, license evaluation, and architecture document to reference the decisions and backend owner.
+
+**Verification:**
+
+- Reviewed internal links and decision references manually.
+
 ### 2026-09-21 - Manav Gupta
 
 **Commit message:** `build: initialize Phase 1 project foundation`
