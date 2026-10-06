@@ -1,0 +1,46 @@
+name: Bug report
+description: Report incorrect behavior. Do not use this form for security vulnerabilities.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never include credentials, tokens, private repository data, or production data. Use synthetic values.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Backend
+        - Frontend
+        - Deployment
+        - Documentation
+        - CI
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit or version
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Redact secrets and personal data before pasting.
+      render: text

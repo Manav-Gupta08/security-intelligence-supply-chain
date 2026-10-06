@@ -42,7 +42,7 @@ Use areas of primary responsibility to reduce collisions, not to create silos:
 
 | Area | Suggested primary owner |
 | --- | --- |
-| Backend platform and architecture | Developer 1 |
+| Backend platform and architecture | Manav Gupta |
 | Supply-chain and vulnerability engine | Developer 2 |
 | Posture, policy, findings, and events | Developer 3 |
 | Frontend, GitHub integration, and developer experience | Developer 4 |
@@ -70,4 +70,8 @@ Before requesting review:
 
 ## Reporting Security Issues
 
-Do not open a public issue for a suspected vulnerability. Until a private disclosure channel is configured in `SECURITY.md`, contact the repository maintainers privately and share only the information necessary to reproduce the issue.
+Do not open a public issue for a suspected vulnerability. Follow [SECURITY.md](SECURITY.md).
+
+## License
+
+By contributing, you agree that your contributions are licensed under the project's [MIT License](LICENSE).

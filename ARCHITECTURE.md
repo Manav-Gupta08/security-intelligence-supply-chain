@@ -144,15 +144,19 @@ The Phase 1 topology will contain:
 
 Docker Compose is the supported initial deployment. Kubernetes and separate worker services are not MVP requirements.
 
-## Architecture Decisions Pending Approval
+## Architecture Decisions
 
-1. Java LTS and Spring Boot versions.
-2. Frontend build tool and component system.
-3. Authentication and session/token mechanism.
-4. Database migration tool.
-5. Durable job implementation.
-6. Secret encryption and key-management approach for self-hosting.
-7. API documentation generator and error format.
-8. Deployment scale and availability targets.
+Decided:
+
+- Java, Spring Boot, frontend build tool, and migration tool: [ADR 0002](docs/decisions/0002-phase-1-technology-baseline.md). The frontend component system remains open.
+- API documentation generator and error format: [ADR 0003](docs/decisions/0003-api-errors-and-documentation.md).
+- GitHub webhook intake: [ADR 0004](docs/decisions/0004-github-webhook-intake.md).
+
+Pending approval:
+
+1. Authentication and session/token mechanism.
+2. Durable job implementation.
+3. Secret encryption and key-management approach for self-hosting.
+4. Deployment scale and availability targets.
 
 Each accepted choice should be recorded as a short architecture decision record under `docs/decisions/` before implementation depends on it.

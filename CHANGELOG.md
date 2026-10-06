@@ -34,6 +34,48 @@ Recommended commit prefixes are `docs`, `feat`, `fix`, `test`, `refactor`, `buil
 
 ## Entries
 
+### 2026-10-06 - Manav Gupta
+
+**Commit message:** `feat(frontend): replace Vite starter with dashboard`
+
+**Changes:**
+
+- Replaced the Vite starter page with an unstyled layout skeleton: header, organization selector placeholder, navigation for the MVP dashboard views, and a placeholder content area.
+- Removed unused starter assets and styles, set the page title, and proxied `/api` to the local backend for development.
+
+**Verification:**
+
+- `npm ci`, `npm run lint`, and `npm run build` passed.
+
+### 2026-10-06 - Manav Gupta
+
+**Commit message:** `feat(backend): add problem errors, organization read API, and GitHub webhook intake`
+
+**Changes:**
+
+- Added RFC 9457 problem responses with correlation IDs, springdoc OpenAPI, hardened error and actuator settings, and cursor pagination.
+- Added Flyway migrations for identity, organization, team, integration installation, and webhook delivery tables with organization-consistent constraints.
+- Added read-only organization and team endpoints, and a GitHub webhook receiver that verifies HMAC signatures over bounded raw bodies before parsing and records deliveries idempotently.
+- Added modularity, signature, controller, pagination, and Testcontainers integration tests, and documented backend configuration and endpoints.
+
+**Verification:**
+
+- `./mvnw test` for the 24 Docker-independent tests passed locally, compiled with `-Djava.version=17` because JDK 21 is not installed; integration tests require Docker and run in CI.
+
+### 2026-10-06 - Manav Gupta
+
+**Commit message:** `docs: adopt MIT license and record Phase 1 decisions`
+
+**Changes:**
+
+- Added the MIT license, security policy, code of conduct, issue forms, and pull request template required for an open-source repository.
+- Added decision records for the license, technology baseline, API error format and documentation, and GitHub webhook intake.
+- Updated the README, contribution rules, Phase 0 tracker, license evaluation, and architecture document to reference the decisions and backend owner.
+
+**Verification:**
+
+- Reviewed internal links and decision references manually.
+
 ### 2026-09-21 - Manav Gupta
 
 **Commit message:** `build: initialize Phase 1 project foundation`

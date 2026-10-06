@@ -1,10 +1,10 @@
 # License Evaluation
 
-**Status:** Decision required before public release  
+**Status:** Decided: MIT (see [ADR 0001](../decisions/0001-open-source-license.md))  
 **Owner:** Manav Gupta  
-**Target date:** Unassigned
+**Decision date:** 2026-10-06
 
-No license is selected by this document. Until the maintainers approve a license and add a root `LICENSE` file, third parties do not automatically receive permission to use, modify, or distribute the code.
+The project is licensed under the MIT License in the root [LICENSE](../../LICENSE) file. The evaluation below is kept as the decision record's background.
 
 ## Decision Drivers
 
@@ -41,9 +41,9 @@ This is a project-strategy decision, not legal advice. Maintainers should review
 
 | Field | Value |
 | --- | --- |
-| Selected license | Pending |
-| Decision owner | Pending |
-| Reviewers | Pending |
-| Decision date | Pending |
-| Rationale | Pending |
-| Follow-up | Add exact license text as root `LICENSE`; update README and contribution documentation |
+| Selected license | MIT |
+| Decision owner | Manav Gupta |
+| Reviewers | Team review pending |
+| Decision date | 2026-10-06 |
+| Rationale | Simplicity and broad adoption; the missing explicit patent grant is an accepted tradeoff |
+| Follow-up | Done: root `LICENSE`, README, and contribution documentation updated |

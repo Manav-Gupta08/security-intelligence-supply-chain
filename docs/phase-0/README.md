@@ -11,22 +11,22 @@ Phase 0 validates the product and establishes reviewed constraints before applic
 | --- | --- | --- | --- | --- |
 | Product and open-source research | [RESEARCH.md](RESEARCH.md) | In progress | Unassigned | Unassigned |
 | MVP requirements | [REQUIREMENTS.md](REQUIREMENTS.md) | Draft | Unassigned | Team |
-| Architecture | [../../ARCHITECTURE.md](../../ARCHITECTURE.md) | Draft | Developer 1 | Team |
+| Architecture | [../../ARCHITECTURE.md](../../ARCHITECTURE.md) | Draft | Manav Gupta | Team |
 | Threat model | [THREAT_MODEL.md](THREAT_MODEL.md) | Draft | Unassigned | Team |
 | Initial database model | [DATA_MODEL.md](DATA_MODEL.md) | Draft | Unassigned | Team |
 | Initial API design | [API_DESIGN.md](API_DESIGN.md) | Draft | Unassigned | Team |
-| License selection | [LICENSE_EVALUATION.md](LICENSE_EVALUATION.md) | Pending decision | Unassigned | Team |
-| Contribution rules | [../../CONTRIBUTING.md](../../CONTRIBUTING.md) | Draft | Developer 1 | Team |
+| License selection | [LICENSE_EVALUATION.md](LICENSE_EVALUATION.md) | Decided: MIT | Manav Gupta | Team |
+| Contribution rules | [../../CONTRIBUTING.md](../../CONTRIBUTING.md) | Draft | Manav Gupta | Team |
 
-Replace `Developer 1` and `Unassigned` with actual names during the Phase 0 kickoff.
+Replace `Unassigned` with actual names during the Phase 0 kickoff.
 
 ## Required Decisions
 
 | ID | Decision | Status | Blocking |
 | --- | --- | --- | --- |
 | `D-001` | Product differentiation supported by external evidence | Open | Phase 1 scope |
-| `D-002` | Open-source license | Open | Public release |
-| `D-003` | Java, Spring Boot, Node.js, and frontend tool versions | Open | Phase 1 scaffolding |
+| `D-002` | Open-source license | Decided in [ADR 0001](../decisions/0001-open-source-license.md) | Public release |
+| `D-003` | Java, Spring Boot, Node.js, and frontend tool versions | Decided in [ADR 0002](../decisions/0002-phase-1-technology-baseline.md) | Phase 1 scaffolding |
 | `D-004` | Authentication and session model | Open | Authentication implementation |
 | `D-005` | Role-to-permission matrix | Open | Protected APIs |
 | `D-006` | GitHub App permissions and webhook events | Open | GitHub integration |
