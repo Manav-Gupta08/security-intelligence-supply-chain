@@ -36,6 +36,21 @@ Recommended commit prefixes are `docs`, `feat`, `fix`, `test`, `refactor`, `buil
 
 ### 2026-10-06 - Manav Gupta
 
+**Commit message:** `feat(backend): add problem errors, organization read API, and GitHub webhook intake`
+
+**Changes:**
+
+- Added RFC 9457 problem responses with correlation IDs, springdoc OpenAPI, hardened error and actuator settings, and cursor pagination.
+- Added Flyway migrations for identity, organization, team, integration installation, and webhook delivery tables with organization-consistent constraints.
+- Added read-only organization and team endpoints, and a GitHub webhook receiver that verifies HMAC signatures over bounded raw bodies before parsing and records deliveries idempotently.
+- Added modularity, signature, controller, pagination, and Testcontainers integration tests, and documented backend configuration and endpoints.
+
+**Verification:**
+
+- `./mvnw test` for the 24 Docker-independent tests passed locally, compiled with `-Djava.version=17` because JDK 21 is not installed; integration tests require Docker and run in CI.
+
+### 2026-10-06 - Manav Gupta
+
 **Commit message:** `docs: adopt MIT license and record Phase 1 decisions`
 
 **Changes:**
