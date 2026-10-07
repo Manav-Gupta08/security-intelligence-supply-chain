@@ -1,12 +1,15 @@
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
+
+const apiProxyTarget = process.env.VITE_API_PROXY_TARGET ?? 'http://localhost:8080'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/api': process.env.VITE_API_PROXY_TARGET ?? 'http://localhost:8080',
+      '/api': apiProxyTarget,
     },
   },
 })
