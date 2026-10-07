@@ -34,6 +34,24 @@ Recommended commit prefixes are `docs`, `feat`, `fix`, `test`, `refactor`, `buil
 
 ## Entries
 
+### 2026-10-07 - Manav Gupta
+
+**Commit message:** `build(docker): add one-command local full-stack startup`
+
+**Changes:**
+
+- Added backend and frontend Docker builds and Compose services with healthy database and Redis dependencies.
+- Added project-root Compose selection and configurable app ports to the environment template; preserved local environment credentials.
+- Made the frontend API proxy configurable for Docker networking and documented full-stack and host-side startup workflows.
+- Ensured the non-root frontend container user can write Vite cache and temporary files.
+
+**Verification:**
+
+- `docker compose config --quiet` passed; resolved service names and backend/frontend build contexts were checked.
+- `npm ci`, `npm run lint`, and `npm run build` passed in `frontend`.
+- Docker container builds passed and all four services started; PostgreSQL and Redis health checks passed.
+- Backend `/actuator/health` reported `UP`; frontend `/` and proxied `/api/v1/organizations` returned HTTP `200`.
+
 ### 2026-10-06 - Manav Gupta
 
 **Commit message:** `feat(frontend): replace Vite starter with dashboard`

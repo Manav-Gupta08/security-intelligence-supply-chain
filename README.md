@@ -9,7 +9,7 @@ The project is currently entering Phase 1: repository foundation.
 ```text
 backend/                    Java 21 and Spring Boot modular monolith
 frontend/                   React and TypeScript application
-deployments/docker-compose/ Local PostgreSQL and Redis infrastructure
+deployments/docker-compose/ Local full-stack Docker Compose setup
 docs/phase-0/               Research and architecture baseline
 ```
 
@@ -17,25 +17,23 @@ docs/phase-0/               Research and architecture baseline
 
 Prerequisites:
 
-- JDK 21
-- Node.js 20 or later
-- Docker with Docker Compose
+- Docker with Docker Compose (on Windows, start Docker Desktop with Linux containers)
 
-```bash
-cp .env.example .env
-docker compose --env-file .env -f deployments/docker-compose/compose.yml up -d
+From the repository root, create `.env` once if it does not already exist:
 
-cd backend
-./mvnw spring-boot:run
+```powershell
+Copy-Item .env.example .env
 ```
 
-In another terminal:
+Then start PostgreSQL, Redis, the backend, and the frontend:
 
-```bash
-cd frontend
-npm install
-npm run dev
+```powershell
+docker compose up --build -d
 ```
+
+Open the frontend at <http://localhost:5173> and API documentation at <http://localhost:8080/swagger-ui.html>.
+Java and Node.js run inside containers; they do not need to be installed locally for this workflow.
+The frontend remains a layout skeleton, and this Compose setup is for local development, not production.
 
 See [DEVELOPMENT.md](DEVELOPMENT.md) for validation commands and environment details.
 

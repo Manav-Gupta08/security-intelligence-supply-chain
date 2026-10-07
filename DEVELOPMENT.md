@@ -1,21 +1,65 @@
 # Development
 
+## Full Stack With Docker
+
+Start Docker Desktop with Linux containers on Windows. From the repository root,
+copy `.env.example` to `.env` once if `.env` does not already exist:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Then start the complete local stack with one command:
+
+```powershell
+docker compose up --build -d
+```
+
+The `COMPOSE_FILE` value in `.env` selects the configuration under
+`deployments/docker-compose/`. Compose builds the Java 21 backend and Node.js
+frontend and waits for PostgreSQL and Redis health checks before starting the
+backend. No local Java, Maven, or Node.js installation is required for this path.
+The frontend runs the Vite development server; this is not a production deployment.
+
+- Frontend: <http://localhost:5173>
+- Backend health: <http://localhost:8080/actuator/health>
+- API documentation: <http://localhost:8080/swagger-ui.html>
+
+The first build downloads images and dependencies. Wait for backend startup before
+using the API. Inspect startup and stop containers without deleting database data:
+
+```powershell
+docker compose ps
+docker compose logs -f backend frontend
+docker compose down
+```
+
+`BACKEND_PORT` and `FRONTEND_PORT` in `.env` control host ports. The containerized
+backend derives database credentials from `POSTGRES_*` and uses Docker service
+names for connections; host-side `SPRING_*` values are not used by Compose.
+Changing `POSTGRES_PASSWORD` does not change the password in an already initialized
+PostgreSQL volume. Update the database role password separately or retain its
+existing credentials; do not delete a volume containing data you need.
+
 ## Toolchain
+
+For running the backend and frontend directly on your machine:
 
 - Java 21 JDK
 - Maven Wrapper included in `backend/`
-- Node.js 20 or later with npm
+- Node.js 22.12 or later with npm
 - Docker and Docker Compose
 
 A Java runtime alone is insufficient; `javac -version` must report Java 21.
 
 ## Infrastructure
 
-Create local environment configuration and start PostgreSQL and Redis:
+For host-side backend and frontend processes, create local environment
+configuration (if absent) and start only PostgreSQL and Redis:
 
 ```bash
 cp .env.example .env
-docker compose --env-file .env -f deployments/docker-compose/compose.yml up -d
+docker compose --env-file .env -f deployments/docker-compose/compose.yml up -d postgres redis
 docker compose --env-file .env -f deployments/docker-compose/compose.yml ps
 ```
 
