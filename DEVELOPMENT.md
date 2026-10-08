@@ -135,7 +135,9 @@ npm run build
 npm run dev
 ```
 
-The frontend is a layout skeleton only; it does not call the API yet. The dev server proxies `/api` to `http://localhost:8080`.
+The frontend uses React with Tailwind CSS for utility styling and Motion for lightweight page transitions. Phase 1 organization and team data is loaded through the versioned API; the dev server proxies `/api` to `http://localhost:8080`.
+
+The complete navigation shell is available for the planned workflows, including onboarding, repositories, integrations, jobs, findings, vulnerabilities, dependencies, SBOMs, posture, events, relationships, and administration. Screens whose APIs are not implemented yet show explicit unavailable or empty states rather than fabricated security data. Authentication screens are present but remain pending the authentication decision.
 
 ## Windows
 
